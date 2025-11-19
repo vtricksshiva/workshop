@@ -1,0 +1,99 @@
+/* App.css */
+
+/* Body and App Container Styling */
+.App {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for the Figure List */
+  .figure-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+    /* background-color: aquamarine; */
+  }
+  
+  /* Styling for each Figure */
+  .figure-container {
+    position: relative;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .figure-container:hover {
+    transform: scale(1.05); /* Add slight zoom effect */
+  }
+  
+  /* Image Styling */
+  .figure-image {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+  }
+  
+  .figure-container:hover .figure-image {
+    opacity: 0.8; /* Add image opacity change on hover */
+  }
+  
+  /* Caption Styling */
+  .figure-caption {
+    padding: 10px;
+    background-color: #f0f0f0;
+    /* background-color: #e74c3c; */
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .figure-caption p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Remove Button Styling */
+  .remove-button {
+    padding: 5px 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 4px;
+  }
+  
+  .remove-button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Add Image Button Styling */
+  .add-button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .add-button:hover {
+    background-color: #2980b9;
+  }
+  
