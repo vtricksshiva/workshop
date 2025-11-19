@@ -58,7 +58,15 @@ npm run start
 **Navigate into the backend folder:**
 
 cd ~/Frontend
-Fix permissions (if needed):
+
+**edit the App.jsx at Frontend/src/**
+at 57th line change the localhost to your <instance_ip>
+** at Frontend/src/components/  edit Login.jsx**
+at 112th line change the localhost to your <instance_ip>
+**at Frontend/src/components/  edit Register.jsx**
+at 131th line change the localhost to your <instance_ip>
+
+**Fix permissions (if needed):**
 sudo chmod -R 777 /home/ubuntu/Frontend/
 
 **Install dependencies:**
