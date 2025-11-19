@@ -5,9 +5,9 @@ Set up a AWS EC2 instance with AMI as ubuntu & instance type as t2.medium
 
  Port	               Purpose              
   22                  SSH
-3306	                MySQL (optional for external access)
-5000	                Backend
-5173	                Vite frontend
+ 3306	                MySQL (optional for external access)
+ 5000	                Backend
+ 5173	                Vite frontend
 80/443	              If using Nginx
 
 **Update & Install Required Packages**
@@ -66,3 +66,17 @@ npm install
 
 **Run locally (for testing):**
 npm run dev -- --host
+
+
+------------------------------------------------**setup using pm2**--------------------------------------------------------
+**Install PM2 globally**:
+
+sudo npm install -g pm2
+
+**Start backend:**
+cd Backend
+pm2 start npm --name "backend" -- run start
+
+**Start frontend:**
+cd Frontend
+pm2 start npm --name "frontend" -- run dev -- --host
