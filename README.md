@@ -11,10 +11,15 @@ Set up a AWS EC2 instance with AMI as ubuntu & instance type as t2.medium
 80/443	              If using Nginx
 
 **Update & Install Required Packages**
-      sudo apt update
-      sudo apt install mysql-server -y
-      sudo apt install nodejs -y
-      sudo apt install npm -y
+      **update the server**
+            sudo apt update
+      **install mysql-server**
+            sudo apt install mysql-server -y
+      **install nodejs**
+            curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+            sudo apt install -y nodejs
+      **install npm**
+            sudo apt install npm -y
 
 **✔ Login to MySQL as root**
       sudo mysql -u root
