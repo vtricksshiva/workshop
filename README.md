@@ -88,3 +88,7 @@ pm2 start npm --name "backend" -- run start
 **Start frontend:**
 cd Frontend
 pm2 start npm --name "frontend" -- run dev -- --host
+
+
+**✔ Backend: http://EC2_PUBLIC_IP:5000
+✔ Frontend (Vite Dev Mode): http://EC2_PUBLIC_IP:5173**
