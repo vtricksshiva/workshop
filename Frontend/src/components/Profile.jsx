@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import { AuthContext } from '../App';
 import ProfileCard from './ProfileCard';
 import axios from 'axios';
+const API = import.meta.env.VITE_API_BASE_URL;
 
 const Profile = () => {
   const { user, setUser } = useContext(AuthContext);
@@ -37,7 +38,7 @@ const Profile = () => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.put(
-        'http://localhost:5000/api/profile/update',
+        `${API}/api/profile/update`,
         formData,
         {
           headers: { Authorization: `Bearer ${token}` }
