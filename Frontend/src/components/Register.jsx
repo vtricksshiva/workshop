@@ -2,6 +2,7 @@ import React, { useState, useContext, useRef } from 'react';
 import { AuthContext } from '../App';
 import axios from 'axios';
 import './Login.css';
+const API = import.meta.env.VITE_API_BASE_URL;
 
 const Register = () => {
   const { setIsAuthenticated, setUser } = useContext(AuthContext);
@@ -128,7 +129,7 @@ const Register = () => {
 
     try {
       const { confirmPassword, ...registerData } = formData;
-      const response = await axios.post('http://localhost:5000/api/auth/register', registerData);
+      const response = await axios.post(`${API}/api/auth/register`, registerData);
       
       localStorage.setItem('token', response.data.token);
       setIsAuthenticated(true);
