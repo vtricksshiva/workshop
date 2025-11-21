@@ -3,6 +3,7 @@ import React, { useState, useContext, useRef } from 'react';
 import { AuthContext } from '../App';
 import axios from 'axios';
 import './Login.css'; // External CSS
+const API = import.meta.env.VITE_API_BASE_URL;
 
 const Login = () => {
   // useContext hook to access global authentication state
@@ -109,7 +110,7 @@ const Login = () => {
 
     try {
       // API call to login
-      const response = await axios.post('http://localhost:5000/api/auth/login', formData);
+      const response = await axios.post(`${API}/api/auth/login`, formData);
       
       // Store token in localStorage
       localStorage.setItem('token', response.data.token);
