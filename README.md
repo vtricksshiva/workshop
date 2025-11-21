@@ -26,14 +26,14 @@ Set up a AWS EC2 instance with AMI as ubuntu & instance type as t2.medium
 
 **Set root password**
       ALTER USER 'root'@'localhost' 
-      IDENTIFIED WITH mysql_native_password BY 'your_password';
+      IDENTIFIED WITH mysql_native_password BY 'vinay';
       FLUSH PRIVILEGES;
 
 **Create Application Database**
       CREATE DATABASE react_app_db;
 
 **Import Existing SQL Dump**
-      mysql -u root -p react_app_db < /home/ubuntu/Dump20251118latest.sql
+      mysql -u root -p react_app_db < /home/ubuntu/workshop/Dump20251118latest.sql
 
 **Set Up Node.js Backend**
 **Navigate into the backend folder:**
@@ -51,7 +51,7 @@ vi .env
 **Example .env:**
 DB_HOST=localhost
 DB_USER=root
-DB_PASSWORD=your_password
+DB_PASSWORD=vinay
 DB_NAME=react_app_db
 PORT=5000
 
@@ -64,12 +64,7 @@ npm run start
 
 cd ~/Frontend
 
-**edit the App.jsx at Frontend/src/**
-at 57th line change the localhost to your <instance_ip>
-** at Frontend/src/components/  edit Login.jsx**
-at 112th line change the localhost to your <instance_ip>
-**at Frontend/src/components/  edit Register.jsx**
-at 131th line change the localhost to your <instance_ip>
+in .env file change the ip withyour actual ip
 
 **Fix permissions (if needed):**
 sudo chmod -R 777 /home/ubuntu/Frontend/
